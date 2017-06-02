@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
-  def welcome 
+  def welcome
   end
   def portfolio
+  end
+  def about
+  end
+  def contact
   end
 end

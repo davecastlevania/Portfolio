@@ -4,13 +4,46 @@
   <title>Portfolio</title>
   <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,500,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="//stephband.info/jquery.event.move/js/jquery.event.move.js"></script>
+  <script src="//stephband.info/jquery.event.swipe/js/jquery.event.swipe.js"></script>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'unslider' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<nav class="navbar navbar-default">
+  <div class="container">
+        <ul class="nav nav-justified">
+          <li><%= link_to "Welcome", root_path %></li>
+          <li><%= link_to "Portfolio", 'portfolio' %></li>
+          <!-- <li><%= link_to "Blog", "https://medium.com/@davecastlevania", :target => "_blank" %></li> -->
+          <li><%= link_to "About", 'about' %></li>
+          <li><%= link_to "Contact", 'contact' %></li>
+        </ul>
+      <!-- <div class="navbar-header">
+        <h1>David Alfonso</h1>
+      </div> -->
+  </div>
+</nav>
+
 <%= yield %>
 
+<div class="footer">
+    <div class="container">
+        <ul class="social_media">
+            <li><a class="github" href="https://github.com/davecastlevania">github</a>
+            </li>
+            <li><a class="linkedin" href="https://www.linkedin.com/in/davidacastaneda/">linkedin</a>
+            </li>
+            <li><a class="twitter" href="https://twitter.com/davecastlevania">twitter</a>
+            </li>
+        </ul>
+        <p>© 2017 David Alfonso | Built using Ruby on Rails</p>
+    </div>
+</div>
 </body>
 </html>
